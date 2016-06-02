@@ -1,0 +1,98 @@
+﻿/***************************************
+template.css
+作成者：山本
+作成日:2016.05.20
+
+!!!!!既存のものは書き換え厳禁!!!!!
+
+****************************************/
+
+/***********ヘッダーとフッター**********/
+.logo{
+	float:left;
+	 width:80px;
+	 height:80px;
+}
+h1{
+	margin:5px;
+	font-size:50px;
+}
+li {
+	display: inline;
+}
+.header_btn{
+	margin-left:900px;
+	margin-right:auto;
+	background: #09C;
+	border: 1px solid #DDD;
+	color: #FFF;
+	text-shadow: 0px 0px 3px rgba(0,0,0,1);
+	width: auto;
+    padding: 3px 5px;
+
+}
+header {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+footer {
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.pan_list{
+	padding:3px;
+	text-align:left;
+	border-top-style: solid;
+	border-top-width: 1px;
+	clear:both;
+}
+/**********ここまで**********/
+
+/*********body**********/
+body {
+	width:auto;
+	background-color: #eeffff;
+	padding: 3px;
+	border-style: solid;
+	border-width: 3px;
+}
+/**********ここまで**********/
+
+
+/**********ボタン系**********/
+.btn {
+    background: #FFF;
+    border: 1px solid #DDD;
+    color: #111;
+    width: 150px;
+    padding: 10px 0;
+}
+
+.color_btn {
+    background: #09C;
+	border: 1px solid #DDD;
+	color: #FFF;
+	text-shadow: 0px 0px 3px rgba(0,0,0,1);
+	width: 150px;
+    padding: 10px 0;
+}
+
+/**********ここまで**********/
+
+/*********テーブル系**********/
+.line_table,.line_table th,.line_table td {
+	border: 1px #000 solid;
+}
+.line_table th{
+	background-color:#CCCCCC
+}
+/**********ここまで**********/
+
+/**********中央寄せ**********/
+.contents_center{
+	margin:0 auto;
+}
+.text_center {
+	text-align: center;
+}
+/**********ここまで**********/

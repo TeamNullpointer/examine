@@ -1,0 +1,20 @@
+﻿.icon_box{
+	float:left;
+}
+.title{
+	background-color:aqua;
+}
+.center{
+	display: inline-block;
+	margin:0 auto;
+}
+.icon {
+	width:120px;
+	height:120px;
+	border: 3px solid #000000;
+}
+.sub_title {
+	border-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+}

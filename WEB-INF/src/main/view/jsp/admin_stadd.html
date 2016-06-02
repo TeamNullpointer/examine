@@ -1,0 +1,89 @@
+﻿<!--
+date:20150523
+name:情シ専2A　○○　○○
+comm:DBへの登録画面
+-->
+
+
+<html>
+<head>
+<title>学生情報追加</title>
+<style type="text/css">
+</style>
+<link href="template.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+		<h2 class="text_center">学生情報追加</h2>
+			<table class="contents_center">
+			<tr>
+				<td>メールアドレス</td>
+				<td><input  name="mail">@ st.asojuku.ac.jp</td>
+			</tr>
+			<tr>
+				<td>お名前</td>
+				<td>姓：<input  maxlength='8' name="name1" size="20"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>名：<input  maxlength='8' name="name2" size="20"></td>
+			</tr>
+			<tr>
+				<td>フリガナ（カナ）</td>
+				<td>セイ：<input name="name3" size="20"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>メイ：<input name="name"></td>
+			</tr>
+			<tr>
+				<td>パスワード</td>
+				<td><input type="password" name="password1" size="20"></td>
+			</tr>
+			<tr>
+				<td>パスワード再入力</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			
+			<tr>
+				<td>生年月日</td>
+				<td><select name="year">
+				<option value="">--</option>
+				</select>
+				年
+				<SELECT name="month">
+				<option value="">--</option>
+				</SELECT>
+				月
+				<SELECT name="day">
+				<option value="">--</option>
+				</select>
+				日
+				</td>
+			</tr>
+			<tr>
+				<td style="height: 23px">学科</td>
+				<td style="height: 23px"><select name="example1" id="search2">
+							<option value="">学科</option>
+							</select></td>			
+			</tr>
+			<tr>
+				<td>学年</td>
+				<td><select name="example2" id="search2">
+							<option value="">学年</option>
+							</select></td>			
+			</tr>
+			<tr>
+				<td>クラス</td>
+				<td><select name="example" id="search2">
+							<option value="">クラス</option>
+							</select></td>			
+			</tr>
+			</table>
+		<form action="" method="" class="text_center">
+			<input class="btn" type="button" value="キャンセル" >
+			<input class="color_btn" type="submit" value="登録" >
+		</form>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>取得検定一覧</title>
+<link href="template.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h2 class="text_center">取得検定一覧</h2>
+<!--主催名、検定名、実施日検索-->
+<div class="text_center">
+	<select name="promotor_name">
+		<option value="">主催名</option>
+		<!--↓DBから取得した主催名を表示-->
+		<option value=""></option>
+	</select>
+	<select name="examine_serch">
+		<option value="">検定名</option>
+		<!--↓DBから取得した検定名を表示-->
+		<option value=""></option>
+	</select>
+	<select name="select_date">
+		<option value="">実施日</option>
+		<!--↓DBから取得した実施日を表示-->
+		<option value=""></option>
+	</select>
+	を持った学生一覧
+	<img alt="検索用アイコン" class="auto-style1" height="34" src="../素材/icon_2.gif" width="35">
+	</div>
+	<br>
+	<!--検定を取得している学生一覧を表示-->
+		<table class="line_table contents_center">
+			<tr>
+				<th>学科・学年・クラス</th>
+				<th>氏名</th>
+			</tr>
+			<!--↓DBから取得したデータ表示-->
+			<tr>
+				<td></td>
+				<td><a href="" ></a></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a href="" ></a></td>
+
+			</tr>
+		</table>
+	<!--メニューへ戻る-->
+	<form action="" class="text_center">
+		<input type="button" value="メニューへ"  class="btn"/>
+	</form>
+</body>
+
+</html>
