@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+<%@ page contentType="text/html; charset=utf-8" %>
 <head>
 <meta content="ja" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>管理者側_取得検定一覧画面</title>
-<link href="template.css" rel="stylesheet" type="text/css">
+<link href="../../../css/template.css" rel="stylesheet" type="text/css">
+<link href="../../../css/menu.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="text_center">
@@ -30,12 +31,12 @@
 </table>
 <p>学生を探す</p>
 <INPUT type="text" name="StudentSerch">
-<img alt="検索用アイコン" height="34" src="../素材/icon_2.gif" width="35">
+<img alt="検索用アイコン" height="34" src="../../../img/icon.gif" width="35">
 <form method="post">
 	<br>
 		<button class="btn" type="button">検定の検索へ</button>
 	</form>
-	
+
 </body>
 
 </html>
