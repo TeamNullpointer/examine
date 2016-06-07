@@ -33,7 +33,9 @@
 		<!--↓DBから取得したデータ表示-->
 		<option value=""></option>
 	</select>
+	<a href="">
 	<img alt="検索用アイコン" height="34" src="../../../img/icon.gif" width="35">
+	</a>
 </div>
 <br>
 <!--検定情報一覧表示-->

@@ -44,7 +44,9 @@
 		<option value=""></option>
 	</select>
 	を持った学生一覧
+	<a href="">
 	<img alt="検索用アイコン" class="auto-style1" height="34" src="../../../img/icon.gif" width="35">
+	</a>
 	</div>
 	<br>
 	<!--検定を取得している学生一覧を表示-->
