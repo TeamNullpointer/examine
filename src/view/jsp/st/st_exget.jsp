@@ -6,7 +6,7 @@
 <head>
 
 <title>取得検定一覧画面</title>
-<link rel="stylesheet" type="text/css" href="WEB-INF/src/view/css/template.css">
+<link rel="stylesheet" type="text/css" href="../../view/css/template.css">
 </head>
 
 <body class="text_center">

@@ -8,7 +8,7 @@
 <title>取得検定の追加</title>
 
 <!--CSSファイルはここに追記-->
-<link rel="stylesheet" type="text/css" href="src/view/css/template.css">
+<link rel="stylesheet" type="text/css" href="../../css/template.css">
 <!--ここまで-->
 
 </head>
