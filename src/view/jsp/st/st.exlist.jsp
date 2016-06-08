@@ -8,7 +8,7 @@
 
 <title>検定情報一覧</title>
 <!--CSSファイルはここに追記-->
-<link rel="stylesheet" type="text/css" href="WEB-INF/src/view/css/template.css">
+<link rel="stylesheet" type="text/css" href="../../css/template.css">
 <!--ここまで-->
 </head>
 <body>
