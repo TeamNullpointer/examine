@@ -1,19 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
-
+<%@ page contentType="text/html; charset=utf-8" %>
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>ログイン</title>
+<title>ログアウト</title>
 
 <!--CSSファイルはここに追記-->
-<link rel="stylesheet" type="text/css" href="../template.css">
+<link rel="stylesheet" type="text/css" href="src/view/css/template.css">
 <!--ここまで-->
 
 </head>
 
 <body>
 <header>
-<img class="logo" alt="logo" src="../../Pictures/wallaby.png">
+<img class="logo" alt="logo" src="src/view/img/logo.gif">
 <h1>検定管理システム</h1>
 ようこそ<b><!--ユーザの名前を表示する--></b>さん。
 <input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
@@ -32,14 +31,15 @@
 
 <!--コンテンツはここから書いてね-->
 
-<table class="contents_center">
-<tr><td>メールアドレス</td><td><input name="Text1" type="text" /> @st.asojuku.ac.jp</td></tr>
-<tr><td>パスワード</td><td><input name="Text1" type="text" width="200px"/></td></tr>
-</table>
-<br>
 <div class="text_center">
-<input class="color_btn" name="Button1" type="button" value="ログイン" />
+<p>本当にログアウトしてもよろしいでしょうか？</p>
+<form action="<%=request.getContextPath() %>/login" method="POST">
+<input class="color_btn" name="Button1" type="submit" value="ログアウト" />
+<input class="btn" name="Button1" type="button" value="キャンセル" />
+</form>
 </div>
+
+
 
 <!--コンテンツはここまで-->
 

@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
-
+<%@ page contentType="text/html; charset=utf-8" %>
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>無題 1</title>
+<title>メニュー</title>
 
 <!--CSSファイルはここに追記-->
-<link rel="stylesheet" type="text/css" href="../template.css">
-<link rel="stylesheet" type="text/css" href="../menu.css">
+<link rel="stylesheet" type="text/css" href="src/view/css/template.css">
+<link rel="stylesheet" type="text/css" href="src/view/css/menu.css">
 <!--ここまで-->
 
 </head>
 
 <body>
 <header>
-<img class="logo" alt="logo" src="../../Pictures/wallaby.png">
+<img class="logo" alt="logo" src="src/view/img/logo.gif">
 <h1>検定管理システム</h1>
 ようこそ<b><!--ユーザの名前を表示する--></b>さん。
 <input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
@@ -40,12 +39,12 @@
 
 <div class="center">
 <figure class="icon_box">
-<img class="icon" alt="個人取得検定検索" src="../../Pictures/own_search.png">
+<img class="icon" alt="個人取得検定検索" src="src/view/img/own_search.png">
 <figcaption>個人取得検定検索</figcaption>
 </figure>
 
 <figure class="icon_box">
-<img class="icon" alt="全体取得検定検索" src="../../Pictures/all_search.png">
+<img class="icon" alt="全体取得検定検索" src="src/view/img/all_search.png">
 <figcaption>全体取得検定検索</figcaption>
 </figure>
 </div>
