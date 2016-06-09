@@ -7,10 +7,27 @@
 
 <title>取得検定一覧画面</title>
 <link rel="stylesheet" type="text/css" href="../../view/css/template.css">
+<link href="../../../css/menu.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="text_center">
+<header>
+<img class="logo" alt="logo" src="../../img/logo.gif">
+<h1>検定管理システム</h1>
+ようこそ<b><!--ユーザの名前を表示する--></b>さん。
+<input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
+<!--ここにパンくずリストを書いて下さい-->
+<!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
+<div class="pan_list">
+<ul>
+　<li><a href="/">ページ１</a> ＞</li>
+ 　<li><a href="/">ページ２</a> ＞</li>
+ 　<li>ページ３</li>
+</ul>
+</div>
+<!--パンくずリストのコードはここまで-->
 
+</header>
 <h2>取得検定一覧</h2>
 <p>（ユーザ名）さんが取得した検定の一覧です</p>
 <!-- DBからデータを持ってくる -->
@@ -32,11 +49,12 @@
 </table>
 	<form method="post">
 	<a href="http://it.sk-shikaku.com/hajimate/merit.html" target="_blank">資格を取るメリットは？</a>
-	</br>
+	<br>
 <button class="btn" type="button">検定の情報を見る</button>
 <button class="color_btn" type="button">検定を追加する</button>
 	</form>
-	
+	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
+
 </body>
 
 </html>
