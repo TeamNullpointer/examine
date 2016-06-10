@@ -5,12 +5,29 @@
 <meta content="ja" http-equiv="Content-Language">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>管理者側_取得検定一覧画面</title>
-<link href="../../../css/template.css" rel="stylesheet" type="text/css">
-<link href="../../../css/menu.css" rel="stylesheet" type="text/css">
+<link href="src/view/css/template.css" rel="stylesheet" type="text/css">
+<link href="src/view/css/menu.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="text_center">
+<body>
+<header>
+<img class="logo" alt="logo" src="src/view/img/logo.gif">
+<h1>検定管理システム</h1>
+ようこそ<b><!--ユーザの名前を表示する--></b>さん。
+<input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
+<!--ここにパンくずリストを書いて下さい-->
+<!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
+<div class="pan_list">
+<ul>
+　<li><a href="/">ページ１</a> ＞</li>
+ 　<li><a href="/">ページ２</a> ＞</li>
+ 　<li>ページ３</li>
+</ul>
+</div>
+<!--パンくずリストのコードはここまで-->
 
+</header>
+<div class="text_center">
 <h2>学生取得検定一覧</h2>
 <p>（ユーザ名）さんが取得した検定の一覧です</p>
 <table class="line_table contents_center">
@@ -31,12 +48,13 @@
 </table>
 <p>学生を探す</p>
 <INPUT type="text" name="StudentSerch">
-<img alt="検索用アイコン" height="34" src="../../../img/icon.gif" width="35">
+<img alt="検索用アイコン" height="34" src="src/view/img/icon.gif" width="35">
 <form method="post">
 	<br>
 		<button class="btn" type="button">検定の検索へ</button>
 	</form>
-
+	</div>
+	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 </body>
 
 </html>
