@@ -32,7 +32,7 @@
 </table>
 	<form method="post">
 	<a href="http://it.sk-shikaku.com/hajimate/merit.html" target="_blank">資格を取るメリットは？</a>
-	</br>
+	<br>
 <button class="btn" type="button">検定の情報を見る</button>
 <button class="color_btn" type="button">検定を追加する</button>
 	</form>
