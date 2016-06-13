@@ -12,34 +12,7 @@
   </filter-mapping>
 
 
-
-<servlet>
-	<servlet-name>LoginStartAction</servlet-name>
-	<servlet-class>jp.ac.asojuku.ems.action.LoginStartAction</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>LoginStartAction</servlet-name>
-	<url-pattern>/login</url-pattern>
-</servlet-mapping>
-
-<servlet>
-	<servlet-name>LogoutStartAction</servlet-name>
-	<servlet-class>jp.ac.asojuku.ems.action.LogoutStartAction</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>LogoutStartAction</servlet-name>
-	<url-pattern>/logout</url-pattern>
-</servlet-mapping>
-
-<servlet>
-	<servlet-name>MenuStartAction</servlet-name>
-	<servlet-class>jp.ac.asojuku.ems.action.MenuStartAction</servlet-class>
-</servlet>
-<servlet-mapping>
-	<servlet-name>MenuStartAction</servlet-name>
-	<url-pattern>/menu</url-pattern>
-</servlet-mapping>
-
+<!-- admin ex_get -->
 <servlet>
 	<servlet-name>Admin_exgetStartAction</servlet-name>
 	<servlet-class>jp.ac.asojuku.ems.action.Admin_exgetStartAction</servlet-class>
@@ -49,6 +22,7 @@
 	<servlet-name>Admin_exgetStartAction</servlet-name>
 	<url-pattern>/admin_exget</url-pattern>
 </servlet-mapping>
+
 
 <servlet>
 	<servlet-name>Admin_exlist_singleStartAction</servlet-name>
@@ -60,6 +34,10 @@
 	<url-pattern>/admin_exlist_single</url-pattern>
 </servlet-mapping>
 
+<!-- ここまで -->
+
+
+<!-- admin ex_list -->
 <servlet>
 	<servlet-name>Admin_exadd_checkStartAction</servlet-name>
 	<servlet-class>jp.ac.asojuku.ems.action.Admin_exadd_checkStartAction</servlet-class>
@@ -109,9 +87,12 @@
 	<servlet-name>Admin_exupdateStartAction</servlet-name>
 	<url-pattern>/admin_update</url-pattern>
 </servlet-mapping>
+<!-- ここまで -->
 
+
+<!-- admin st -->
 <servlet>
-	<servlet-name>Admin_stadd_checkStartAction</servlet-name>
+	<servlet-name>Admin_stadd_check</servlet-name>
 	<servlet-class>jp.ac.asojuku.ems.action.Admin_stadd_checkStartAction</servlet-class>
 </servlet>
 
@@ -151,7 +132,7 @@
 </servlet-mapping>
 
 <servlet>
-	<servlet-name>Admin_stupdateStartAction</servlet-name>
+	<servlet-name>Admin_updateStartAction</servlet-name>
 	<servlet-class>jp.ac.asojuku.ems.action.Admin_stupdateStartAction</servlet-class>
 </servlet>
 
@@ -159,7 +140,10 @@
 	<servlet-name>Admin_stupdateStartAction</servlet-name>
 	<url-pattern>/admin_stupdate</url-pattern>
 </servlet-mapping>
+<!-- ここまで -->
 
+
+<!-- st -->
 <servlet>
 	<servlet-name>St_exaddStartAction</servlet-name>
 	<servlet-class>jp.ac.asojuku.ems.action.St_exaddStartAction</servlet-class>
@@ -177,7 +161,7 @@
 
 <servlet-mapping>
 	<servlet-name>St_exgetStartAction</servlet-name>
-	<url-pattern>/st_exget</url-pattern>
+	<url-pattern>/St_exget</url-pattern>
 </servlet-mapping>
 
 <servlet>
@@ -189,5 +173,38 @@
 	<servlet-name>St_exlistStartAction</servlet-name>
 	<url-pattern>/st_exlist</url-pattern>
 </servlet-mapping>
+<!-- ここまで -->
 
+
+<!-- system -->
+<servlet>
+	<servlet-name>LoginStartAction</servlet-name>
+	<servlet-class>jp.ac.asojuku.ems.action.LoginStartAction</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>LoginStartAction</servlet-name>
+	<url-pattern>/login</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>LogoutStartAction</servlet-name>
+	<servlet-class>jp.ac.asojuku.ems.action.LogoutStartAction</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>LogoutStartAction</servlet-name>
+	<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>MenuStartAction</servlet-name>
+	<servlet-class>jp.ac.asojuku.ems.action.MenuStartAction</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>MenuStartAction</servlet-name>
+	<url-pattern>/menu</url-pattern>
+</servlet-mapping>
+<!-- ここまで -->
 </web-app>
