@@ -6,13 +6,13 @@
 <head>
 
 <title>取得検定一覧画面</title>
-<link rel="stylesheet" type="text/css" href="../../view/css/template.css">
-<link href="../../../css/menu.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="src/view/view/css/template.css">
+<link href="src/view/css/menu.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="text_center">
 <header>
-<img class="logo" alt="logo" src="../../img/logo.gif">
+<img class="logo" alt="logo" src="src/view/img/logo.gif">
 <h1>検定管理システム</h1>
 ようこそ<b><!--ユーザの名前を表示する--></b>さん。
 <input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />

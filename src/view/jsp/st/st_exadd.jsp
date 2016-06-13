@@ -8,8 +8,8 @@
 <title>取得検定の追加</title>
 
 <!--CSSファイルはここに追記-->
-<link rel="stylesheet" type="text/css" href="../../css/template.css">
-<link href="../../../css/menu.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="src/view/css/template.css">
+<link href="src/view/css/menu.css" rel="stylesheet" type="text/css">
 <!--ここまで-->
 
 </head>
@@ -17,7 +17,7 @@
 <body>
 
 <header>
-<img class="logo" alt="logo" src="../../img/logo.gif">
+<img class="logo" alt="logo" src="src/view/img/logo.gif">
 <h1>検定管理システム</h1>
 ようこそ<b><!--ユーザの名前を表示する--></b>さん。
 <input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
