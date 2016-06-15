@@ -25,9 +25,8 @@ comm:DBへの登録画面
 <!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
 <div class="pan_list">
 <ul>
-　<li><a href="/">ページ１</a> ＞</li>
- 　<li><a href="/">ページ２</a> ＞</li>
- 　<li>ページ３</li>
+　<li><a href="http://localhost:8080/menu">メニュー</a> ＞</li>
+ 　<li><a href="">学生情報更新</a> </li>
 </ul>
 </div>
 <!--パンくずリストのコードはここまで-->

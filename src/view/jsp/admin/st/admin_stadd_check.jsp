@@ -16,15 +16,6 @@
 <input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
 <!--ここにパンくずリストを書いて下さい-->
 <!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
-<div class="pan_list">
-<ul>
-　<li><a href="/">ページ１</a> ＞</li>
- 　<li><a href="/">ページ２</a> ＞</li>
- 　<li>ページ３</li>
-</ul>
-</div>
-<!--パンくずリストのコードはここまで-->
-
 </header>
 	<div  class="text_center">
 	<h2>学生情報追加確認</h2>

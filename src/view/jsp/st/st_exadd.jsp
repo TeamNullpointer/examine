@@ -23,13 +23,6 @@
 <input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
 <!--ここにパンくずリストを書いて下さい-->
 <!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
-<div class="pan_list">
-<ul>
-　<li><a href="http://localhost:8080/EMS/st_exget">取得検定一覧</a> ＞</li>
- 　<li><a href="">検定情報追加</a> </li>
-</ul>
-</div>
-<!--パンくずリストのコードはここまで-->
 
 </header>
 <div class="text_center">
