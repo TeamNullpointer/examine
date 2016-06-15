@@ -6,7 +6,7 @@
 <head>
 
 <title>取得検定一覧画面</title>
-<link rel="stylesheet" type="text/css" href="src/view/view/css/template.css">
+<link rel="stylesheet" type="text/css" href="src/view/css/template.css">
 <link href="src/view/css/menu.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -20,9 +20,7 @@
 <!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
 <div class="pan_list">
 <ul>
-　<li><a href="/">ページ１</a> ＞</li>
- 　<li><a href="/">ページ２</a> ＞</li>
- 　<li>ページ３</li>
+　<li><a href="">取得検定一覧</a> </li>
 </ul>
 </div>
 <!--パンくずリストのコードはここまで-->

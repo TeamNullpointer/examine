@@ -25,9 +25,8 @@
 <!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
 <div class="pan_list">
 <ul>
-　<li><a href="/">ページ１</a> ＞</li>
- 　<li><a href="/">ページ２</a> ＞</li>
- 　<li>ページ３</li>
+　<li><a href="http://localhost:8080/EMS/st_exget">取得検定一覧</a> ＞</li>
+ 　<li><a href="">検定情報追加</a> </li>
 </ul>
 </div>
 <!--パンくずリストのコードはここまで-->
@@ -86,6 +85,10 @@
 				}
 			%>
 	</select>日
+</p>
+<p>
+<input type="radio" name="result" value="0" checked>合格
+<input type="radio" name="result" value="1">不合格
 </p>
 
 <button type="button" class="btn">取得検定一覧へ</button>

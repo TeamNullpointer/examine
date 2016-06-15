@@ -22,9 +22,8 @@
 <!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
 <div class="pan_list">
 <ul>
-　<li><a href="/">ページ１</a> ＞</li>
- 　<li><a href="/">ページ２</a> ＞</li>
- 　<li>ページ３</li>
+　<li><a href="http://localhost:8080/EMS/st_exget">取得検定一覧</a> ＞</li>
+ 　<li><a href="">検定情報一覧</a> </li>
 </ul>
 </div>
 <!--パンくずリストのコードはここまで-->
