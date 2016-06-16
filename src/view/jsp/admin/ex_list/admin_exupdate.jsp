@@ -41,43 +41,6 @@
 </p>
 
 
-<p>
-開催日<select name="year">
-		<%
-		int year = 1980;
-		while(year <= 2016){
-			%>
-				<option value="<%=year%>"><%=year%></option>
-			<%
-				year++;
-				}
-			%>
-</select>年
-
-	<select name="month">
-			<%
-				int month = 01;
-				while(month <= 12){
-			%>
-				<option value="<%=month%>"><%=month%></option>
-			<%
-				month++;
-				}
-			%>
-	</select>月
-		<select name="day">
-			<%
-				int day = 01;
-				while(day <= 31){
-			%>
-				<option value="<%=day%>"><%=day%></option>
-			<%
-				day++;
-				}
-			%>
-	</select>日
-</p>
-
 <button type="button" class="btn">メニュー画面へ</button>
 <button type="button"class="color_btn">検定を更新する</button>
 	</form>
