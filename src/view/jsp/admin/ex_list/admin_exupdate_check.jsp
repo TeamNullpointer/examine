@@ -38,10 +38,6 @@
 				<td>検定名</td>
 				<td></td>
 			</tr>
-			<tr>
-				<td>実施日</td>
-				<td></td>
-			</tr>
 		</table>
 		<br>
 		<button class="btn">戻る</button>
