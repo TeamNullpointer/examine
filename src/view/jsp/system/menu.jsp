@@ -50,11 +50,19 @@
 </div>
 
 <br><div class="sub_title"><h3>情報一覧＆追加</h3></div><br>
-<input class="btn" name="Button1" type="button" value="検定情報一覧" />
-<input class="btn" name="Button1" type="button" value="検定情報追加" /><br>
-<input class="btn" name="Button1" type="button" value="学生情報一覧" />
-<input class="btn" name="Button1" type="button" value="学生情報追加" />
-
+<%String path = ""; %>
+<form  action="<%=request.getContextPath() %>/admin_exlist" method="GET" style="display: inline">
+	<input class="btn" name="Button1" type="submit" value="検定情報一覧" />
+</form>
+<form  action="<%=request.getContextPath() %>/admin_exadd" method="GET" style="display: inline">
+	<input class="btn" name="Button1" type="submit" value="検定情報追加" /><br>
+</form>
+<form  action="<%=request.getContextPath() %>/admin_stlist" method="GET" style="display: inline">
+	<input class="btn" name="Button1" type="submit" value="学生情報一覧" />
+</form>
+<form  action="<%=request.getContextPath() %>/admin_stadd" method="GET"style="display: inline">
+	<input class="btn" name="Button1" type="submit" value="学生情報追加" />
+</form>
 </div>
 
 
