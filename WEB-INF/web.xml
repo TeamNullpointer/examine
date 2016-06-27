@@ -190,4 +190,14 @@
 	<url-pattern>/st_exlist</url-pattern>
 </servlet-mapping>
 
+<!--　追加しました。6/27 馬場-->
+<servlet>
+	<servlet-name>Login_check</servlet-name>
+	<servlet-class>jp.ac.asojuku.ems.action.Login_check</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Login_check</servlet-name>
+	<url-pattern>/login_check</url-pattern>
+</servlet-mapping>
 </web-app>
