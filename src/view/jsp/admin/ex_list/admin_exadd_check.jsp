@@ -45,9 +45,13 @@
 			</tr>
 		</table>
 		<br>
-		<button class="btn">戻る</button>
+		<br>
 		<button class="color_btn">登録</button>
 	</form>
+		<form action="<%=request.getContextPath() %>/admin_exadd"method="post">
+			<button class="btn">戻る</button>
+		</form>
+
 		<footer>
 			<p class="text_center">
 				Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.

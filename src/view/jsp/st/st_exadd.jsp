@@ -27,7 +27,7 @@
 </header>
 <div class="text_center">
 <p><h2>取得検定の追加</h2>
-	<form method="post">
+	<form method="post" action="<%=request.getContextPath()%>/st_exget">
 <p>
 	主催名<select name="kentei">
 	<option value="1">ここでDBから主催名を取得</option>
@@ -83,10 +83,13 @@
 <input type="radio" name="result" value="0" checked>合格
 <input type="radio" name="result" value="1">不合格
 </p>
-
-<button type="button" class="btn">取得検定一覧へ</button>
-<button type="button" class="color_btn">検定を追加する</button>
+		<button type="button" class="color_btn">検定を追加する</button>
 	</form>
+
+	<form action="<%=request.getContextPath()%>/st_exget">
+		<button type="submit" class="btn">取得検定一覧へ</button>
+	</form>
+
 
 <footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 </div>

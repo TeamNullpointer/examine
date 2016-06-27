@@ -28,7 +28,7 @@
 </header>
 	<div class="text_center">
 	<h2>検定情報更新確認</h2>
-	<form>
+	<form action="" method="post">
 		<table class="contents_center">
 			<tr>
 				<td>主催名</td>
@@ -40,7 +40,7 @@
 			</tr>
 		</table>
 		<br>
-		<button class="btn">戻る</button>
+		<button class="btn" >戻る</button>
 		<button class="color_btn">登録</button>
 	</form>
 	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>

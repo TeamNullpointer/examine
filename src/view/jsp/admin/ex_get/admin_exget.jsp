@@ -5,6 +5,7 @@
 <title>取得検定一覧</title>
 <link href="src/view/css/template.css" rel="stylesheet" type="text/css">
 <link href="src/view/css/menu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="src/view/js/filter.js"></script>
 </head>
 
 <body>
@@ -44,9 +45,8 @@
 		<option value=""></option>
 	</select>
 	を持った学生一覧
-	<a href="">
-	<img alt="検索用アイコン" class="auto-style1" height="34" src="src/view/img/icon.gif" width="35">
-	</a>
+	 <input type="submit" value="" action="<%=request.getContextPath() %>/admin_exget" method="GET"
+	  style="width:35px; height:35px; background-image:url(src/view/img/icon.gif); background-size:34px 35px;"/>
 	</div>
 	<br>
 	<!--検定を取得している学生一覧を表示-->
@@ -67,8 +67,10 @@
 			</tr>
 		</table>
 	<!--メニューへ戻る-->
-	<form action="" class="text_center">
-		<input type="button" value="メニューへ"  class="btn"/>
+	<br>
+	<br>
+	<form action="<%=request.getContextPath() %>/menu" class="text_center" method="POST">
+		<input type="submit" value="メニューへ"  class="btn"/>
 	</form>
 	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 </body>

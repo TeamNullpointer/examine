@@ -36,6 +36,7 @@ comm:DBへの登録画面
 
 </header>
 		<h2 class="text_center">学生情報追加</h2>
+		<form action="<%=request.getContextPath() %>/admin_stadd_check" method="post" class="text_center">
 			<table class="contents_center">
 			<tr>
 				<td>メールアドレス</td>
@@ -125,9 +126,10 @@ comm:DBへの登録画面
 							</select></td>
 			</tr>
 			</table>
-		<form action="" method="" class="text_center">
-			<input class="btn" type="button" value="キャンセル" >
 			<input class="color_btn" type="submit" value="登録" >
+		</form>
+		<form action="<%=request.getContextPath() %>/menu" method="post" class="text_center">
+			<input class="btn" type="submit" value="キャンセル" >
 		</form>
 		<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 	</body>

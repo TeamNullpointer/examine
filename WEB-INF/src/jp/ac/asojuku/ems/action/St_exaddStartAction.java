@@ -16,4 +16,10 @@ public class  St_exaddStartAction extends HttpServlet {
 		// TODO 自動生成されたメソッド・スタブ
 		rd.forward(req, resp);
 	}
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		RequestDispatcher rd = req.getRequestDispatcher("src/view/jsp/st/st_exadd.jsp");
+		// TODO 自動生成されたメソッド・スタブ
+		rd.forward(req, resp);
+	}
 }

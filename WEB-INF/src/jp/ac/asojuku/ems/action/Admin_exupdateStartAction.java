@@ -16,4 +16,10 @@ public class Admin_exupdateStartAction  extends HttpServlet {
 		// TODO 自動生成されたメソッド・スタブ
 		rd.forward(req, resp);
 	}
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		RequestDispatcher rd = req.getRequestDispatcher("src/view/jsp/admin/ex_list/admin_exupdate.jsp");
+		// TODO 自動生成されたメソッド・スタブ
+		rd.forward(req, resp);
+	}
 }

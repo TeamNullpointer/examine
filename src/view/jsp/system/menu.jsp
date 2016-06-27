@@ -39,12 +39,16 @@
 
 <div class="center">
 <figure class="icon_box">
-<img class="icon" alt="個人取得検定検索" src="src/view/img/own_search.png">
+<a href="<%= request.getContextPath() %>/admin_exlist_single">
+	<img class="icon" alt="個人取得検定検索" src="src/view/img/own_search.png">
+</a>
 <figcaption>個人取得検定検索</figcaption>
 </figure>
 
 <figure class="icon_box">
-<img class="icon" alt="全体取得検定検索" src="src/view/img/all_search.png">
+<a href="<%= request.getContextPath() %>/admin_exget">
+	<img class="icon" alt="全体取得検定検索" src="src/view/img/all_search.png">
+</a>
 <figcaption>全体取得検定検索</figcaption>
 </figure>
 </div>

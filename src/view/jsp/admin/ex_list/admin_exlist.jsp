@@ -33,9 +33,9 @@
 		<!--↓DBから取得したデータ表示-->
 		<option value=""></option>
 	</select>
-	<a href="">
-	<img alt="検索用アイコン" height="34" src="src/view/img/icon.gif" width="35">
-	</a>
+ <input type="submit" value="" action="<%=request.getContextPath() %>/admin_exlist" method="GET"
+	  style="width:35px; height:35px; background-image:url(src/view/img/icon.gif); background-size:34px 35px;"/>
+
 </div>
 <br>
 <!--検定情報一覧表示-->
@@ -48,13 +48,18 @@
 	<!--以降、DBからのデータを持ってくる-->
 		<td></td>
 		<td></td>
-		<td><input name="update" type="button" value="更新" class="color_btn"/></td>
+		<td>
+			<form action="<%=request.getContextPath()%>/admin_exupdate" method="get">
+				<input name="update" type="submit" value="更新" class="color_btn"/>
+			</form>
+		</td>
 	</tr>
 </table>
 </div>
 <!--メニューへ戻る-->
-<form action="" class="text_center">
-	<input class="btn" name="menu" type="button" value="メニューへ" /></form>
+	<form action="<%=request.getContextPath() %>/menu" method="post" class="text_center">
+		<input class="btn" name="menu" type="submit" value="メニューへ" />
+	</form>
 	<footer>
 		<p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p>
 	</footer>

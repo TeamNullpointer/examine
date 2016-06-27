@@ -63,8 +63,10 @@
 			</tr>
 		</table>
 		<br>
-		<button class="btn" >戻る</button>
 		<button class="color_btn" >登録</button>
+	</form>
+	<form action="<%=request.getContextPath()%>/admin_stadd" method="post">
+		<button class="btn" >戻る</button>
 	</form>
 	</div>
 	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>

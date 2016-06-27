@@ -32,7 +32,7 @@
 <div class="text_center">
 <!--コンテンツはここから書いてね-->
 <p>
-<form method="post">
+<form action="<%=request.getContextPath() %>/admin_exupdate_check" method="post">
 	主催名<input name="kentei" type="text" >
 </p>
 
@@ -40,11 +40,14 @@
 	検定名<input name="kentei" type="text" >
 </p>
 
-
-<button type="button" class="btn">メニュー画面へ</button>
-<button type="button"class="color_btn">検定を更新する</button>
+<button type="submit"class="color_btn">検定を更新する</button>
 	</form>
-	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
+	<br>
+	<br>
+	<form action="<%=request.getContextPath()%>/menu" method="post" class="text_center">
+		<button type="submit" class="btn">メニュー画面へ</button>
+	</form>
+		<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 	</div>
 </body>
 

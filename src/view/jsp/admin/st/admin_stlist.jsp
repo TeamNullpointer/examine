@@ -54,7 +54,7 @@ comm:DBへの登録画面
 				<td></td>
 				<td></td>
 				<td>
-					<form action="" method="">
+					<form action="<%=request.getContextPath() %>/admin_stupdate" method="get">
    						<input class="color_btn" type="submit" value="更新">
    						<input class="color_btn" type="submit" value="削除">
    					</form>
@@ -62,8 +62,8 @@ comm:DBへの登録画面
 			</tr>
 		</table>
 		<br>
-		<form>
-			<input class="btn" type="button" value="メニューへ" >
+		<form action="<%=request.getContextPath() %>/menu" method="post">
+			<input class="btn" type="submit" value="メニューへ" >
 		</form>
 		<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 		</div>

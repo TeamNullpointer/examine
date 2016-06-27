@@ -48,10 +48,12 @@
 </table>
 <p>学生を探す</p>
 <INPUT type="text" name="StudentSerch">
-<img alt="検索用アイコン" height="34" src="src/view/img/icon.gif" width="35">
-<form method="post">
+<input type="submit" value="" action="<%=request.getContextPath() %>/admin_exlist_single" method="GET"
+	  style="width:35px; height:35px; background-image:url(src/view/img/icon.gif); background-size:34px 35px;"/>
 	<br>
-		<button class="btn" type="button">検定の検索へ</button>
+	<br>
+	<form method="get" action="<%= request.getContextPath() %>/admin_exget">
+		<button class="btn" type="submit">検定の検索へ</button>
 	</form>
 	</div>
 	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>

@@ -16,4 +16,10 @@ public class  St_exlistStartAction extends HttpServlet {
 		// TODO 自動生成されたメソッド・スタブ
 		rd.forward(req, resp);
 	}
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		RequestDispatcher rd = req.getRequestDispatcher("src/view/jsp/st/st_exlist.jsp");
+		// TODO 自動生成されたメソッド・スタブ
+		rd.forward(req, resp);
+	}
 }

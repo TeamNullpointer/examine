@@ -33,7 +33,7 @@ comm:DBへの登録画面
 
 </header>
 		<h2 class="text_center">学生情報更新</h2>
-		<form action="" method="" class="text_center">
+		<form action="<%=request.getContextPath() %>/admin_stupdate_check" method="post" class="text_center">
 			<table class="contents_center">
 			<tr>
 				<td>お名前</td>
@@ -89,8 +89,10 @@ comm:DBへの登録画面
 				<td>パスワード再入力</td><td><input type="password" name="password"></td>
 			</tr>
 			</table>
-			<input class="btn" type="reset" value="キャンセル">
 			<input class="color_btn" type="submit" value="変更する">
+		</form>
+		<form action="<%=request.getContextPath() %>/admin_stlist" method="get" class="text_center">
+			<input class="btn" type="submit" value="キャンセル">
 		</form>
 		<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 	</body>

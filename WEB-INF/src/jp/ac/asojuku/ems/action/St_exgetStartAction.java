@@ -16,4 +16,10 @@ public class  St_exgetStartAction extends HttpServlet {
 		// TODO 自動生成されたメソッド・スタブ
 		rd.forward(req, resp);
 	}
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		RequestDispatcher rd = req.getRequestDispatcher("src/view/jsp/st/st_exget.jsp");
+		// TODO 自動生成されたメソッド・スタブ
+		rd.forward(req, resp);
+	}
 }

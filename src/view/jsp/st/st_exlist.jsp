@@ -46,8 +46,8 @@
 	</table>
 </div>
 <!--メニューへ戻る-->
-<form class="text_center" action="">
-	<input class="btn" name="menu" type="button" value="メニューへ" />
+<form class="text_center" action="<%=request.getContextPath()%>/st_exget">
+	<input class="btn" name="menu" type="submit" value="メニューへ" />
 </form>
 <footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 

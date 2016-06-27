@@ -21,7 +21,7 @@
 <div class="pan_list">
 <ul>
 　<li><a href="">ログイン</a> </li>
- 
+
 </ul>
 </div>
 <!--パンくずリストのコードはここまで-->
@@ -29,11 +29,11 @@
 </header>
 
 <!--コンテンツはここから書いてね-->
-<form action="<%=request.getContextPath() %>/dologin" method="POST">
+<form action="<%=request.getContextPath() %>/login_check" method="POST">
 <table class="contents_center">
 <tr><td>メールアドレス</td>
 <td><input name="usermail" type="text" /> @st.asojuku.ac.jp</td></tr>
-<tr><td>パスワード</td><td><input name="password" type="text" width="200px"/></td></tr>
+<tr><td>パスワード</td><td><input name="password" type="password" width="200px"/></td></tr>
 </table>
 <br>
 <div class="text_center">

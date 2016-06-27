@@ -33,7 +33,7 @@
 <div class="text_center">
  <h2>検定情報の追加</h2>
 
-	<form method="post">
+	<form method="post" action="<%=request.getContextPath() %>/admin_exadd_check" >
 	 <p>
 	<input type="radio" name="syusai" value="syusai" checked="check"> 登録済みの主催情報を登録
 <input type="radio" name="syusai" value="syusai"> 新たな主催名を登録
@@ -100,10 +100,15 @@
 			%>
 		</select>日
 		</p>
-
-		<button type="button" class="btn">メニュー画面へ</button>
-		<button type="button" class="color_btn">検定を登録する</button>
+		<br>
+		<br>
+		<button type="submit" class="color_btn">検定を登録する</button>
 	</form>
+	<br>
+	<br>
+		<form action="<%=request.getContextPath()%>/menu" method="post" class="text_center">
+			<button type="submit" class="btn">メニュー画面へ</button>
+		</form>
 
 	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 	</div>
