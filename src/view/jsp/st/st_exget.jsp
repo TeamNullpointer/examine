@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <%@ page contentType="text/html; charset=utf-8" %>
+<%@ page import="main.datamodel.objects.User" %>
 <head>
 
 <title>取得検定一覧画面</title>
@@ -14,14 +15,18 @@
 <header>
 <img class="logo" alt="logo" src="src/view/img/logo.gif">
 <h1>検定管理システム</h1>
-ようこそ<b><!--ユーザの名前を表示する--></b>さん。
-<input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
-<!--ここにパンくずリストを書いて下さい-->
-<!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
+<%
+User user = new User();
+user = (User)session.getAttribute("user");
+%>
+ようこそ<b><%=user.name %></b>さん。
+<form  action="<%=request.getContextPath()%>/logout" method="get">
+<input class="header_btn" name="Button1" type="submit" value="ログアウト" />
+</form>
 
 </header>
 <h2>取得検定一覧</h2>
-<p>（ユーザ名）さんが取得した検定の一覧です</p>
+<p><%=user.name %>さんが取得した検定の一覧です</p>
 <!-- DBからデータを持ってくる -->
 <table class="line_table contents_center">
   <tr>
@@ -47,7 +52,7 @@
 <form method="post" action="<%=request.getContextPath()%>/st_exadd">
 <button class="color_btn" type="submit">検定を追加する</button>
 	</form>
-	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
+	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All right Reserved.</p></footer>
 
 </body>
 
