@@ -200,4 +200,15 @@
 	<servlet-name>Login_check</servlet-name>
 	<url-pattern>/login_check</url-pattern>
 </servlet-mapping>
+<!--　追加しました。6/28 馬場-->
+<servlet>
+	<servlet-name>LogoutSuccess</servlet-name>
+	<servlet-class>jp.ac.asojuku.ems.action.LogoutSuccess</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>LogoutSuccess</servlet-name>
+	<url-pattern>/logout_success</url-pattern>
+</servlet-mapping>
+
 </web-app>
