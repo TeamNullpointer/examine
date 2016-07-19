@@ -4,6 +4,7 @@
 <html>
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="main.datamodel.objects.User" %>
+<%@ page import="" %>
 <head>
 
 <title>取得検定一覧画面</title>

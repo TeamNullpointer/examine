@@ -210,5 +210,14 @@
 	<servlet-name>LogoutSuccess</servlet-name>
 	<url-pattern>/logout_success</url-pattern>
 </servlet-mapping>
+<!--　追加しました。7/19 馬場-->
+<servlet>
+	<servlet-name>Admin_stupdate_Success</servlet-name>
+	<servlet-class>jp.ac.asojuku.ems.action.Admin_stupdate_Success</servlet-class>
+</servlet>
 
+<servlet-mapping>
+	<servlet-name>Admin_stupdate_Success</servlet-name>
+	<url-pattern>/admin_stupdate_success</url-pattern>
+</servlet-mapping>
 </web-app>
