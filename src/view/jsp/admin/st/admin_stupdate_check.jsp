@@ -20,49 +20,76 @@ User user = new User();
 user = (User)session.getAttribute("user");
 %>
 ようこそ<b><%=user.name %></b>さん。
+		 
 <form  action="<%=request.getContextPath()%>/logout" method="get">
 <input class="header_btn" name="Button1" type="submit" value="ログアウト" />
 </form>
 </header>
 <div   class="text_center" >
 	<h2>学生情報更新確認</h2>
-	<form>
+<%	String name = (String) request.getAttribute( "name" );
+String kana = (String) request.getAttribute( "kana" );
+Integer class_id = ((Integer) request.getAttribute( "class_id" ));
+String class_name = (String) request.getAttribute( "class_name" );
+ String riyu2 = (String) request.getAttribute( "riyu" );
+String password =	(String)request.getAttribute("password" );
+ %>
 		<table class="contents_center">
 			<tr>
 				<td>お名前</td>
-				<td>姓：</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>名：</td>
+				<td><%= name %></td>
 			</tr>
 			<tr>
 				<td>フリガナ(カナ）</td>
-				<td>セイ：</td>
+				<td><%=kana %></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td>メイ：</td>
+				<td>学科学年クラス</td>
+				<td><%=class_name %></td>
 			</tr>
-			<tr>
-				<td>学科</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>学年</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>クラス</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>パスワード</td>
-				<td></td>
-			</tr>
+			<%
+			//確認用
+			System.out.println("********送信前*******");
+			System.out.println("名前："+name);
+			System.out.println("かな："+kana);
+			System.out.println("クラスID："+class_id);
+			System.out.println("クラス名："+class_name);
+			System.out.println("パスワード："+password);
+			//次のjava(Admin_stupdate_Success)に価を送る準備
+				session.setAttribute("st_name",name);
+				session.setAttribute("st_kana",kana);
+				session.setAttribute("class_id",class_id);
+				session.setAttribute("class_name",class_name);
+				session.setAttribute("riyu", riyu2);
+				session.setAttribute("password",password);
+			//確認用
+			System.out.println("********SUCCESSに価を送ります*******");
+			System.out.println("名前："+name);
+			System.out.println("かな："+kana);
+			System.out.println("クラスID："+class_id);
+			System.out.println("クラス名："+class_name);
+			System.out.println("パスワード："+password);
+			
+			
+			if(riyu2.equals("1")){
+				out.print("<tr><td>パスワード</td>");
+				out.print("<td>");
+				int i = 0;
+				while(i < password.length()){
+					out.print("*");
+					i++;
+				}
+				out.print("</td></tr>");	
+			}	%>
 		</table>
 		<br>
-		<button class="btn" >戻る</button>
+		<% 
+		
+		%>
+			<form action="<%=request.getContextPath() %>/admin_stupdate" method="get">
+		<button class="btn">戻る</button>
+		</form>
+			<form action="<%=request.getContextPath() %>/admin_stupdate_success" method="post">
 		<button class="color_btn" >登録</button>
 	</form>
 	</div>
