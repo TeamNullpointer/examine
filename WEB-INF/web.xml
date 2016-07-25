@@ -220,4 +220,15 @@
 	<servlet-name>Admin_stupdate_Success</servlet-name>
 	<url-pattern>/admin_stupdate_success</url-pattern>
 </servlet-mapping>
+
+<!-- 追加しました　16/7/25 山本 -->
+<servlet>
+	<servlet-name>St_addDb</servlet-name>
+	<servlet-class>jp.ac.asojuku.ems.action.Admin_stadd_db</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>St_addDb</servlet-name>
+	<url-pattern>/admin_stadd_db</url-pattern>
+</servlet-mapping>
 </web-app>

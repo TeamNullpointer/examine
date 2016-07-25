@@ -1,81 +1,91 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <%@ page contentType="text/html; charset=utf-8" %>
-<%@ page import="main.datamodel.objects.User" %>
-<head>
+<%@ page import="main.datamodel.objects.ManageUser" %>
+<%@ page import="main.datamodel.objects.ClassInfo" %>
+<%@ page import="main.model.students.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 
-<title>取得検定一覧画面</title>
+<head>
+<title>学生情報追加確認画面</title>
 <link rel="stylesheet" type="text/css" href="src/view/css/template.css">
 <link href="src/view/css/menu.css" rel="stylesheet" type="text/css">
-<link href="src/view/css/check.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="text_center">
-<header>
-<img class="logo" alt="logo" src="src/view/img/logo.gif">
-<h1>検定管理システム</h1>
 <%
-User user = new User();
-user = (User)session.getAttribute("user");
+ManageUser check_form = (ManageUser)session.getAttribute("check_form");
+String check_birthday = (String)request.getAttribute("birthday");
 %>
-ようこそ<b><%=user.name %></b>さん。
-<form  action="<%=request.getContextPath()%>/logout" method="get">
-<input class="header_btn" name="Button1" type="submit" value="ログアウト" />
-</form>
+
+<body>
+<header>
+<img class="logo" alt="logo" src="../../../img/logo.gif">
+<h1>検定管理システム</h1>
+ようこそ<b><!--ユーザの名前を表示する--></b>さん。
+<input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
+<!--ここにパンくずリストを書いて下さい-->
+<!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
+<div class="pan_list">
+<ul>
+　<li><a href="/">ページ１</a> ＞</li>
+ 　<li><a href="/">ページ２</a> ＞</li>
+ 　<li>ページ３</li>
+</ul>
+</div>
+<!--パンくずリストのコードはここまで-->
 
 </header>
 	<div  class="text_center">
 	<h2>学生情報追加確認</h2>
-	<form>
 		<table class="contents_center">
 			<tr>
 				<td>メールアドレス</td>
-				<td>@st.asojuku.ac.jp</td>
+				<td><%=check_form.mail %></td>
 			</tr>
 			<tr>
 				<td>お名前</td>
-				<td>姓：</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>名：</td>
-			</tr>
+				<td><%=check_form.name %></td>
 			<tr>
 				<td>フリガナ(カナ）</td>
-				<td>セイ：</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>メイ：</td>
+				<td><%=check_form.name_kana %></td>
 			</tr>
 			<tr>
 				<td>パスワード</td>
-				<td></td>
+				<%
+				int i = 0;
+				int word_length = (check_form.password).length();
+				String pass = "";
+				while(i < word_length){
+					pass += "*";
+					i++;
+				} %>
+				<td><%=pass %></td>
 			</tr>
 			<tr>
 				<td>生年月日</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>学科</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>学年</td>
-				<td></td>
+				<td><%=check_birthday %></td>
 			</tr>
 			<tr>
 				<td>クラス</td>
-				<td></td>
+				<% List<ClassInfo> classes = new ArrayList<ClassInfo>();
+				Students getStData = new Students();
+				classes = getStData.getClassList();
+
+				for(ClassInfo cldata : classes){
+					if(cldata.class_id != check_form.class_id){
+						continue;
+					}
+				%>
+				<td><%=cldata.class_name %></td>
+				<%} %>
 			</tr>
+
 		</table>
 		<br>
-		<button class="color_btn" >登録</button>
-	</form>
-	<form action="<%=request.getContextPath()%>/admin_stadd" method="post">
-		<button class="btn" >戻る</button>
-	</form>
+<form  action="<%=request.getContextPath() %>/admin_stadd_db" method="post" style="display: inline">
+		<input type="submit">
+</form>
 	</div>
 	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>
 </body>

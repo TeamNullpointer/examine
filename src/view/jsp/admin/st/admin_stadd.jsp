@@ -1,8 +1,16 @@
 ﻿
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="src/view/css/template.css">
+<link href="src/view/css/menu.css" rel="stylesheet" type="text/css">
+
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="main.datamodel.objects.User" %>
+<%@ page import="main.datamodel.objects.ClassInfo" %>
+<%@ page import="main.model.students.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="main.datamodel.objects.ManageUser" %>
 <head>
 
 <title>取得検定一覧画面</title>
@@ -22,40 +30,53 @@ user = (User)session.getAttribute("user");
 <form  action="<%=request.getContextPath()%>/logout" method="get">
 <input class="header_btn" name="Button1" type="submit" value="ログアウト" />
 </form>
-
+<%
+int class_id = 0;
+List<ClassInfo> classes = new ArrayList<ClassInfo>();
+Students getStData = new Students();
+classes = getStData.getClassList();
+%>
 </header>
 		<h2 class="text_center">学生情報追加</h2>
 		<form action="<%=request.getContextPath() %>/admin_stadd_check" method="post" class="text_center">
 			<table class="contents_center">
 			<tr>
 				<td>メールアドレス</td>
-				<td><input  name="mail">@ st.asojuku.ac.jp</td>
+				<td><input name="mail">@ st.asojuku.ac.jp</td>
 			</tr>
 			<tr>
 				<td>お名前</td>
-				<td>姓：<input  maxlength='8' name="name1" size="20"></td>
+				<td>姓：<input  maxlength='8' name="name1" size="20" id="sei"></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td>名：<input  maxlength='8' name="name2" size="20"></td>
+				<td>名：<input  maxlength='8' name="name2" size="20" id="mei"></td>
 			</tr>
 			<tr>
 				<td>フリガナ（カナ）</td>
-				<td>セイ：<input name="name3" size="20"></td>
+				<td>セイ：<input name="name3" size="20" id="sei_kana"></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td>メイ：<input name="name"></td>
+				<td>メイ：<input name="name4" size="20" id="mei_kana"></td>
 			</tr>
 			<tr>
 				<td>パスワード</td>
-				<td><input type="password" name="password1" size="20"></td>
+				<td><input type="password" name="pass" size="20" id="pass"></td>
 			</tr>
 			<tr>
 				<td>パスワード再入力</td>
-				<td><input type="password" name="password"></td>
+				<td><input type="password" name="pass_check" id="pass_check"></td>
 			</tr>
-
+			<%
+				String pass = request.getParameter("pass1");
+				String pass_check = request.getParameter("pass2");
+				if(pass != pass_check){
+			%>
+				<td>入力されたパスワードが異なっています</td>
+			<%
+				}
+			%>
 			<tr>
 				<td>生年月日</td>
 				<td><select name="year">
@@ -97,23 +118,26 @@ user = (User)session.getAttribute("user");
 				</td>
 			</tr>
 			<tr>
-				<td style="height: 23px">学科</td>
-				<td style="height: 23px"><select name="example1" id="search2">
-							<option value="">学科</option>
-							</select></td>
+				<td>
+					学科・学年・クラス
+				</td>
+				<td>
+					<select name="class_id" id="search2">
+						<option value="0">学科・学年・クラス</option>
+							<%for(ClassInfo cldata : classes){
+								if(cldata.class_id == 21){
+									continue;
+								}
+								class_id = cldata.class_id;
+							%>
+								<option value="<%=class_id%>"><%=cldata.class_name %></option>
+							<%} %>
+			</select>
+			</td>
 			</tr>
-			<tr>
-				<td>学年</td>
-				<td><select name="example2" id="search2">
-							<option value="">学年</option>
-							</select></td>
-			</tr>
-			<tr>
-				<td>クラス</td>
-				<td><select name="example" id="search2">
-							<option value="">クラス</option>
-							</select></td>
-			</tr>
+			<%
+				//stAdd.class_id =Integer.parseInt(request.getParameter("class_id"));
+			%>
 			</table>
 			<input class="color_btn" type="submit" value="登録" >
 		</form>
