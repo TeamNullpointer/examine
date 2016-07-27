@@ -22,9 +22,15 @@
 <header>
 <%
 User user = new User();
-String mailadd = (String)request.getParameter("StudentSerch") + "@st.asojuku.ac.jp";
+String stnum = (String)request.getAttribute("stnum");
+String mailadd = "";
+System.out.println(stnum);
+if(stnum != null){
+mailadd = stnum;
+}else{
+mailadd = (String)request.getParameter("StudentSerch") + "@st.asojuku.ac.jp";
+}
 user.mail = mailadd;
-
 List<StudentExamineHistory> stExamList = new ArrayList<StudentExamineHistory>();
 StudentExamine stExam = new StudentExamine();
 stExamList = stExam.select(user);
@@ -45,14 +51,12 @@ try{
 <img class="logo" alt="logo" src="src/view/img/logo.gif">
 <h1>検定管理システム</h1>
 ようこそ<b><!--ユーザの名前を表示する--></b>さん。
-<input class="header_btn" name="Button1" type="button" value="ログイン／ログアウト" />
+<form  action="<%=request.getContextPath()%>/logout" method="get">
+<input class="header_btn" name="Button1" type="submit" value="ログアウト" />
+</form>
 <!--ここにパンくずリストを書いて下さい-->
 <!--処理の例が書いてあるので書き換えるかコピー＆ペーストしてください-->
 <div class="pan_list">
-<ul>
-　<li><a href="">メニュー</a> ＞</li>
- 　<li>学生取得検定一覧</li>
-</ul>
 </div>
 <!--パンくずリストのコードはここまで-->
 
@@ -86,12 +90,11 @@ try{
 <p>学生を探す</p>
 <form  action="<%=request.getContextPath() %>/admin_exlist_single" method="GET" style="display: inline">
 	<INPUT type="text" name="StudentSerch">@st.asojuku.ac.jp
-	<input type="submit">
+	<input type="submit" style="width:35px; height:35px; background-image:url(src/view/img/icon.gif); background-size:34px 35px;">
 </form>
-<img alt="検索用アイコン" height="34" src="src/view/img/icon.gif" width="35">
-<form method="post">
+<form method="get" action="<%=request.getContextPath()%>/admin_exget">
 	<br>
-		<button class="btn" type="button">検定の検索へ</button>
+		<button class="btn" type="submit" >検定の検索へ</button>
 	</form>
 	</div>
 	<footer><p class="text_center">Copyright &copy; 2016 Team Nullpointer All rihgt Reserved.</p></footer>

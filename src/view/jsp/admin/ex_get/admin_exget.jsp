@@ -43,6 +43,14 @@ ExaDisp getEx = new ExaDisp();
 promoter = getPro.list();
 GetExamineHistoryTeacher geht = new GetExamineHistoryTeacher();
 geht = (GetExamineHistoryTeacher)request.getAttribute("geht");
+if(geht != null){
+	System.out.println("gehtアリ");
+	System.out.println(geht.examine_id);
+	System.out.println(geht.promoter_id);
+	System.out.println(geht.examine_day);
+}else{
+	System.out.println("gehtナシ");
+}
 String promoter_id = (String)request.getAttribute("p_id");
 //String date = request.getParameter("date");
 //System.out.println(promoter_id);
@@ -53,7 +61,6 @@ if(promoter_id != null){
 	//geht.examine_day = date;
 	//geht.examine_id = examine_id;
 	//geht.promoter_id = promoter_id;
-	System.out.println(promoter_id);
 	TeacherExamine getList = new TeacherExamine();
 	getExList = getList.examine_select(geht);
 }
@@ -83,7 +90,7 @@ if(promoter_id != null){
 	</select>
 		<!--↓DBから取得した検定名を表示-->
 		<%
-			examine = getEx.disp(null);
+			examine = getEx.disp("null");
 		%>
 			<script>
 				 exmaine = [ <% for(int i = 0; i <= examine.size()-1; i++){
@@ -200,7 +207,6 @@ if(promoter_id != null){
 					</form>
 					<!-- <a href="<%=request.getContextPath() %>/admin_exlist_single"><%=eht.name %></a> -->
 				</td>
-				<td><%=eht.mail %></td>
 			</tr>
 
 			<%
